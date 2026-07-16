@@ -9,6 +9,7 @@
   --color-olive-soft: #5f7135;
   --color-terracotta: #c1682f;
   --color-terracotta-soft: #d98a52;
+  --color-sage: #9cb23a;
   --color-brown: #2e2418;
   --color-muted: #7c7157;
 }
@@ -22,6 +23,7 @@
   --color-olive-soft: var(--color-olive-soft);
   --color-terracotta: var(--color-terracotta);
   --color-terracotta-soft: var(--color-terracotta-soft);
+  --color-sage: var(--color-sage);
   --color-brown: var(--color-brown);
   --color-muted: var(--color-muted);
   --font-display: var(--font-fraunces);

@@ -143,11 +143,18 @@ export default function Home() {
           <div className="mt-8 grid gap-6 text-sm text-brown/80 md:grid-cols-3">
             <div>
               <p className="font-semibold text-olive">Teléfono / WhatsApp</p>
-              <p>A completar</p>
+              <a href="https://wa.me/5493464446766" className="hover:text-terracotta">
+                03464 44-6766
+              </a>
             </div>
             <div>
               <p className="font-semibold text-olive">Email</p>
-              <p>A completar</p>
+              <a
+                href="mailto:clegumbressrl@gmail.com"
+                className="hover:text-terracotta"
+              >
+                clegumbressrl@gmail.com
+              </a>
             </div>
             <div>
               <p className="font-semibold text-olive">Dirección</p>

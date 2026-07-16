@@ -5,6 +5,12 @@ export default function Footer() {
         <div>
           <p className="font-display text-lg font-semibold text-olive">El Talar</p>
           <p>Comercial Legumbres SRL</p>
+          <p>
+            <a href="mailto:clegumbressrl@gmail.com" className="hover:text-terracotta">
+              clegumbressrl@gmail.com
+            </a>{" "}
+            · 03464 44-6766
+          </p>
         </div>
         <p>© {new Date().getFullYear()} Comercial Legumbres SRL. Todos los derechos reservados.</p>
       </div>

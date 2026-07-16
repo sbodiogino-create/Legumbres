@@ -17,7 +17,6 @@ npm run dev
 
 ## Pendiente de completar
 
-- Datos de contacto reales (teléfono/WhatsApp, email, dirección) en
-  `src/app/page.tsx` (sección "Contacto") y `src/components/WhatsAppButton.tsx`.
+- Dirección física en `src/app/page.tsx` (sección "Contacto").
 - Logo y fotos reales de producto.
 - Definir catálogo detallado de variedades por línea (granel / envasado / mayorista).

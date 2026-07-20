@@ -150,10 +150,10 @@ export default function Home() {
             <div>
               <p className="font-semibold text-olive">WhatsApp</p>
               <a
-                href="https://wa.me/5493464466766"
+                href="https://wa.me/5493464446766"
                 className="hover:text-terracotta"
               >
-                03464-466766
+                03464-446766
               </a>
             </div>
             <div>

@@ -17,7 +17,7 @@ export default function Footer() {
             <a href="mailto:clegumbressrl@gmail.com" className="hover:text-terracotta">
               clegumbressrl@gmail.com
             </a>{" "}
-            · Tel. 03464-493492 · WhatsApp 03464-466766
+            · Tel. 03464-493492 · WhatsApp 03464-446766
           </p>
         </div>
         <p>© {new Date().getFullYear()} Comercial Legumbres SRL. Todos los derechos reservados.</p>

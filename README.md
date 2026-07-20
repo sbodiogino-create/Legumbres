@@ -17,6 +17,7 @@ npm run dev
 
 ## Pendiente de completar
 
-- Dirección física en `src/app/page.tsx` (sección "Contacto").
-- Logo y fotos reales de producto.
+- Fotos reales de producto (bolsas) para la sección "Productos".
+- Confirmar el número de WhatsApp (`03464-466766`, tomado del logo) — el
+  número pasado por chat difería en un dígito.
 - Definir catálogo detallado de variedades por línea (granel / envasado / mayorista).

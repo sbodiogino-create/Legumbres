@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5493464446766";
+const WHATSAPP_NUMBER = "5493464466766";
 const MESSAGE = encodeURIComponent(
   "Hola, quiero hacer una consulta sobre los productos de El Talar."
 );

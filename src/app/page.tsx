@@ -140,11 +140,20 @@ export default function Home() {
             Escribinos por WhatsApp o dejanos tus datos y te respondemos a la
             brevedad.
           </p>
-          <div className="mt-8 grid gap-6 text-sm text-brown/80 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 text-sm text-brown/80 sm:grid-cols-2 md:grid-cols-4">
             <div>
-              <p className="font-semibold text-olive">Teléfono / WhatsApp</p>
-              <a href="https://wa.me/5493464446766" className="hover:text-terracotta">
-                03464 44-6766
+              <p className="font-semibold text-olive">Teléfono</p>
+              <a href="tel:+543464493492" className="hover:text-terracotta">
+                03464-493492
+              </a>
+            </div>
+            <div>
+              <p className="font-semibold text-olive">WhatsApp</p>
+              <a
+                href="https://wa.me/5493464466766"
+                className="hover:text-terracotta"
+              >
+                03464-466766
               </a>
             </div>
             <div>
@@ -158,7 +167,7 @@ export default function Home() {
             </div>
             <div>
               <p className="font-semibold text-olive">Dirección</p>
-              <p>A completar</p>
+              <p>Fuentes, Santa Fe</p>
             </div>
           </div>
         </div>

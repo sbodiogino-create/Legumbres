@@ -1,3 +1,5 @@
+import FieldBackground from "@/components/FieldBackground";
+
 const productos = [
   {
     title: "Legumbres a granel",
@@ -34,8 +36,9 @@ const valores = [
 export default function Home() {
   return (
     <>
-      <section className="border-b border-line/70 bg-cream-soft">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-20 md:py-28">
+      <section className="relative overflow-hidden border-b border-line/70">
+        <FieldBackground className="absolute inset-0 -z-10 h-full w-full" />
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-24 md:py-32">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-terracotta">
             Comercial Legumbres SRL
           </p>

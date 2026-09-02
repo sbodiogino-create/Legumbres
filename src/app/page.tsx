@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FieldBackground from "@/components/FieldBackground";
 
 const productos = [
@@ -16,6 +17,17 @@ const productos = [
     description:
       "Volúmenes grandes para distribuidores, comercios e industria alimenticia, con condiciones comerciales pensadas para negocio B2B.",
   },
+];
+
+const catalogo = [
+  { name: "Porotos Alubias", image: "/productos/porotos-alubias.jpg" },
+  { name: "Arvejas Partidas", image: "/productos/arvejas-partidas.jpg" },
+  { name: "Garbanzos", image: "/productos/garbanzos.jpg" },
+  { name: "Lentejas", image: "/productos/lentejas.jpg" },
+  { name: "Lentejón", image: "/productos/lentejon.jpg" },
+  { name: "Maíz Pisingallo", image: "/productos/maiz-pisingallo.jpg" },
+  { name: "Maíz Pisado Blanco", image: "/productos/maiz-pisado-blanco.jpg" },
+  { name: "Maíz Pisado Colorado", image: "/productos/maiz-pisado-colorado.jpg" },
 ];
 
 const valores = [
@@ -99,6 +111,34 @@ export default function Home() {
                   {producto.title}
                 </h3>
                 <p className="text-sm text-brown/70">{producto.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="font-display mt-16 text-2xl font-semibold text-olive">
+            Catálogo El Talar
+          </h3>
+          <p className="mt-3 max-w-2xl text-brown/70">
+            Variedades envasadas de 400 g, listas para góndola.
+          </p>
+          <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
+            {catalogo.map((item) => (
+              <div
+                key={item.name}
+                className="overflow-hidden rounded-2xl border border-line bg-card"
+              >
+                <div className="relative aspect-[3/4] w-full">
+                  <Image
+                    src={item.image}
+                    alt={`Bolsa de ${item.name} El Talar, 400 g`}
+                    fill
+                    sizes="(min-width: 768px) 22vw, 45vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="px-3 py-3 text-center text-sm font-semibold text-olive">
+                  {item.name}
+                </p>
               </div>
             ))}
           </div>

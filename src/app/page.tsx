@@ -1,49 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import FieldBackground from "@/components/FieldBackground";
+import { catalogo, valores } from "@/lib/content";
 
-const productos = [
-  {
-    title: "Legumbres a granel",
-    description:
-      "Lentejas, garbanzos, porotos y arvejas seleccionadas, vendidas por peso para almacenes, dietéticas y consumidores que compran de a bolsa.",
-  },
-  {
-    title: "Envasadas — marca El Talar",
-    description:
-      "La misma calidad, lista para góndola: paquetes con marca propia, pensados para reventa en supermercados y comercios de cercanía.",
-  },
-  {
-    title: "Venta mayorista",
-    description:
-      "Volúmenes grandes para distribuidores, comercios e industria alimenticia, con condiciones comerciales pensadas para negocio B2B.",
-  },
-];
-
-const catalogo = [
-  { name: "Porotos Alubias", image: "/productos/porotos-alubias.jpg" },
-  { name: "Arvejas Partidas", image: "/productos/arvejas-partidas.jpg" },
-  { name: "Garbanzos", image: "/productos/garbanzos.jpg" },
-  { name: "Lentejas", image: "/productos/lentejas.jpg" },
-  { name: "Lentejón", image: "/productos/lentejon.jpg" },
-  { name: "Maíz Pisingallo", image: "/productos/maiz-pisingallo.jpg" },
-  { name: "Maíz Pisado Blanco", image: "/productos/maiz-pisado-blanco.jpg" },
-  { name: "Maíz Pisado Colorado", image: "/productos/maiz-pisado-colorado.jpg" },
-];
-
-const valores = [
-  {
-    title: "Calidad controlada",
-    description: "Selección y control de calidad en cada lote, de origen a entrega.",
-  },
-  {
-    title: "Trazabilidad",
-    description: "Sabemos de dónde viene cada legumbre que vendemos.",
-  },
-  {
-    title: "Trato directo",
-    description: "Atención personalizada, sin intermediarios innecesarios.",
-  },
-];
+const catalogoPreview = catalogo.slice(0, 4);
 
 export default function Home() {
   return (
@@ -63,24 +23,40 @@ export default function Home() {
             distribuidores y comercios que buscan un proveedor confiable.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
-            <a
-              href="#productos"
+            <Link
+              href="/productos"
               className="rounded-full bg-olive px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-olive-soft"
             >
               Ver productos
-            </a>
-            <a
-              href="#contacto"
+            </Link>
+            <Link
+              href="/contacto"
               className="rounded-full border border-olive px-6 py-3 text-sm font-semibold text-olive transition-colors hover:bg-olive hover:text-cream"
             >
               Contactanos
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section id="nosotros" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-10 md:grid-cols-3">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-3xl font-semibold text-olive md:text-4xl">
+              Nosotros
+            </h2>
+            <p className="mt-3 max-w-2xl text-brown/70">
+              Calidad, trazabilidad y trato directo en cada lote.
+            </p>
+          </div>
+          <Link
+            href="/nosotros"
+            className="text-sm font-semibold text-terracotta hover:text-terracotta-soft"
+          >
+            Conocé más →
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {valores.map((valor) => (
             <div key={valor.title} className="rounded-2xl border border-line bg-card p-6">
               <h3 className="font-display text-xl font-semibold text-olive">
@@ -92,37 +68,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="productos" className="border-y border-line/70 bg-cream-soft">
+      <section className="border-y border-line/70 bg-cream-soft">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="font-display text-3xl font-semibold text-olive md:text-4xl">
-            Nuestros productos
-          </h2>
-          <p className="mt-3 max-w-2xl text-brown/70">
-            Tres formas de trabajar con nosotros, según lo que necesite tu
-            negocio.
-          </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {productos.map((producto) => (
-              <div
-                key={producto.title}
-                className="flex flex-col gap-3 rounded-2xl border border-line bg-card p-6"
-              >
-                <h3 className="font-display text-xl font-semibold text-terracotta">
-                  {producto.title}
-                </h3>
-                <p className="text-sm text-brown/70">{producto.description}</p>
-              </div>
-            ))}
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="font-display text-3xl font-semibold text-olive md:text-4xl">
+                Productos
+              </h2>
+              <p className="mt-3 max-w-2xl text-brown/70">
+                Legumbres a granel, envasadas con marca propia y venta
+                mayorista.
+              </p>
+            </div>
+            <Link
+              href="/productos"
+              className="text-sm font-semibold text-terracotta hover:text-terracotta-soft"
+            >
+              Ver catálogo completo →
+            </Link>
           </div>
-
-          <h3 className="font-display mt-16 text-2xl font-semibold text-olive">
-            Catálogo El Talar
-          </h3>
-          <p className="mt-3 max-w-2xl text-brown/70">
-            Variedades envasadas de 400 g, listas para góndola.
-          </p>
-          <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
-            {catalogo.map((item) => (
+          <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4">
+            {catalogoPreview.map((item) => (
               <div
                 key={item.name}
                 className="overflow-hidden rounded-2xl border border-line bg-card"
@@ -145,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="mayoristas" className="mx-auto max-w-6xl px-6 py-20">
+      <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="font-display text-3xl font-semibold text-olive md:text-4xl">
@@ -153,15 +119,14 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-brown/70">
               Ofrecemos condiciones mayoristas para almacenes, dietéticas,
-              distribuidores e industria alimenticia. Contanos qué volumen y
-              qué productos necesitás y armamos una propuesta a medida.
+              distribuidores e industria alimenticia.
             </p>
-            <a
-              href="#contacto"
+            <Link
+              href="/mayoristas"
               className="mt-6 inline-block rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-terracotta-soft"
             >
-              Pedir condiciones mayoristas
-            </a>
+              Ver condiciones mayoristas
+            </Link>
           </div>
           <div className="rounded-2xl border border-line bg-card p-8">
             <ul className="space-y-3 text-sm text-brown/80">
@@ -170,48 +135,6 @@ export default function Home() {
               <li>• Facturación y condiciones para comercios</li>
               <li>• Stock permanente de las principales variedades</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" className="border-t border-line/70 bg-cream-soft">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="font-display text-3xl font-semibold text-olive md:text-4xl">
-            Contacto
-          </h2>
-          <p className="mt-3 max-w-2xl text-brown/70">
-            Escribinos por WhatsApp o dejanos tus datos y te respondemos a la
-            brevedad.
-          </p>
-          <div className="mt-8 grid gap-6 text-sm text-brown/80 sm:grid-cols-2 md:grid-cols-4">
-            <div>
-              <p className="font-semibold text-olive">Teléfono</p>
-              <a href="tel:+543464493492" className="hover:text-terracotta">
-                03464-493492
-              </a>
-            </div>
-            <div>
-              <p className="font-semibold text-olive">WhatsApp</p>
-              <a
-                href="https://wa.me/5493464446766"
-                className="hover:text-terracotta"
-              >
-                03464-446766
-              </a>
-            </div>
-            <div>
-              <p className="font-semibold text-olive">Email</p>
-              <a
-                href="mailto:clegumbressrl@gmail.com"
-                className="hover:text-terracotta"
-              >
-                clegumbressrl@gmail.com
-              </a>
-            </div>
-            <div>
-              <p className="font-semibold text-olive">Dirección</p>
-              <p>Fuentes, Santa Fe</p>
-            </div>
           </div>
         </div>
       </section>

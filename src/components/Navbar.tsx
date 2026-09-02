@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { href: "#productos", label: "Productos" },
-  { href: "#nosotros", label: "Nosotros" },
-  { href: "#mayoristas", label: "Mayoristas" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/productos", label: "Productos" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/mayoristas", label: "Mayoristas" },
+  { href: "/contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -25,18 +25,18 @@ export default function Navbar() {
         <ul className="hidden gap-8 text-sm font-medium text-brown/80 md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition-colors hover:text-terracotta">
+              <Link href={link.href} className="transition-colors hover:text-terracotta">
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <a
-          href="#contacto"
+        <Link
+          href="/contacto"
           className="rounded-full bg-olive px-5 py-2 text-sm font-semibold text-cream transition-colors hover:bg-olive-soft"
         >
           Hacé tu pedido
-        </a>
+        </Link>
       </nav>
     </header>
   );
